@@ -29,11 +29,19 @@ export default function Navbar({ onStartProject }: NavbarProps) {
         </div>
 
         {/* Brand Logo */}
-        <a href="#home" className="flex items-center gap-2.5 cursor-pointer group">
-          <img 
-            src={logoImg} 
-            alt="Unique Hashtagers Logo" 
-            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 invert" 
+        <a href="#home" className="flex items-center gap-2.5 cursor-pointer group text-zinc-950 hover:text-violet-500 transition-colors duration-300">
+          <div 
+            className="h-10 md:h-12 w-[70px] md:w-[83px] bg-current transition-transform duration-300 group-hover:scale-105"
+            style={{
+              maskImage: `url(${logoImg})`,
+              maskSize: 'contain',
+              maskRepeat: 'no-repeat',
+              maskPosition: 'center',
+              WebkitMaskImage: `url(${logoImg})`,
+              WebkitMaskSize: 'contain',
+              WebkitMaskRepeat: 'no-repeat',
+              WebkitMaskPosition: 'center',
+            }}
           />
         </a>
 

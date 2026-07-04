@@ -13,11 +13,19 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="col-span-2 lg:col-span-3 flex flex-col gap-5">
-            <a href="#home" className="flex items-center gap-2.5 cursor-pointer group w-fit">
-              <img 
-                src={logoImg} 
-                alt="Unique Hashtagers Logo" 
-                className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+            <a href="#home" className="flex items-center gap-2.5 cursor-pointer group w-fit text-zinc-400 hover:text-white transition-colors duration-300">
+              <div 
+                className="h-10 md:h-12 w-[70px] md:w-[83px] bg-current transition-transform duration-300 group-hover:scale-105"
+                style={{
+                  maskImage: `url(${logoImg})`,
+                  maskSize: 'contain',
+                  maskRepeat: 'no-repeat',
+                  maskPosition: 'center',
+                  WebkitMaskImage: `url(${logoImg})`,
+                  WebkitMaskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'center',
+                }}
               />
             </a>
             <p className="text-zinc-400 text-sm leading-relaxed max-w-xs font-light">
