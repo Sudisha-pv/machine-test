@@ -1,3 +1,5 @@
+import logoImg from '../assets/UHE-white.png'
+
 export default function Footer() {
   return (
     <footer className="relative w-full bg-zinc-950 border-t border-zinc-900/80 pt-20 pb-10 select-none">
@@ -11,14 +13,13 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="col-span-2 lg:col-span-3 flex flex-col gap-5">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-violet-600 to-indigo-500 shadow-md flex items-center justify-center">
-                <span className="font-display font-black text-white text-base leading-none">#</span>
-              </div>
-              <span className="font-display font-black text-lg sm:text-xl tracking-wider text-white">
-                UNIQUE<span className="text-violet-500">#</span>
-              </span>
-            </div>
+            <a href="#home" className="flex items-center gap-2.5 cursor-pointer group w-fit">
+              <img 
+                src={logoImg} 
+                alt="Unique Hashtagers Logo" 
+                className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              />
+            </a>
             <p className="text-zinc-400 text-sm leading-relaxed max-w-xs font-light">
               Elite media and marketing agency in Abu Dhabi, serving government and corporate sectors.
             </p>

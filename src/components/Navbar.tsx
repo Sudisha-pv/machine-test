@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Menu, X, ArrowRight } from 'lucide-react'
+import logoImg from '../assets/UHE-white.png'
 
 interface NavbarProps {
   onStartProject: () => void
@@ -28,14 +29,13 @@ export default function Navbar({ onStartProject }: NavbarProps) {
         </div>
 
         {/* Brand Logo */}
-        <div className="flex items-center gap-2.5 cursor-pointer group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-violet-600 to-indigo-500 shadow-md flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <span className="font-display font-black text-white text-base leading-none">#</span>
-          </div>
-          <span className="font-display font-black text-lg sm:text-xl tracking-wider text-zinc-950">
-            UNIQUE<span className="text-violet-500">#</span>MEDIA
-          </span>
-        </div>
+        <a href="#home" className="flex items-center gap-2.5 cursor-pointer group">
+          <img 
+            src={logoImg} 
+            alt="Unique Hashtagers Logo" 
+            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 invert" 
+          />
+        </a>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-8 text-base font-semibold text-zinc-600">
